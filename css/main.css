@@ -206,6 +206,7 @@ header h1#logo {
           justify-content: center;
   opacity: 0;
   visibility: hidden;
+  z-index: 999;
 }
 
 .modal-overlay.active {
@@ -218,6 +219,8 @@ header h1#logo {
   padding: 2.4rem;
   width: 90%;
   max-width: 500px;
+  position: relative;
+  z-index: 1;
 }
 
 #form {

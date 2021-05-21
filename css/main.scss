@@ -243,6 +243,8 @@ header {
     opacity: 0;
     visibility: hidden;
 
+    z-index: 999;
+
     &.active{
         opacity: 1;
         visibility: visible;
@@ -255,6 +257,9 @@ header {
         
         width: 90%;
         max-width: 500px;
+
+        position: relative;
+        z-index: 1;
     }
 }
 
