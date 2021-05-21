@@ -27,7 +27,7 @@ h2 {
 }
 
 a {
-  color: #49AA26;
+  color: #49aa26;
   text-decoration: none;
 }
 
@@ -35,9 +35,44 @@ a:hover {
   color: #3dd705;
 }
 
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background: #49aa26;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3dd705;
+}
+
 .button.new {
   display: inline-block;
   margin-bottom: 0.8rem;
+}
+
+.button.cancel {
+  color: #e92929;
+  border: 2px solid #e92929;
+  border-radius: 0.25rem;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.6;
+}
+
+.button.cancel:hover {
+  opacity: 1;
 }
 
 header {
@@ -152,6 +187,76 @@ header h1#logo {
 .container #transaction #data-table thead tr th:last-child,
 .container #transaction #data-table tbody tr td:last-child {
   border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay .modal {
+  background: #f0f2f5;
+  padding: 2.4rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+#form {
+  max-width: 500px;
+}
+
+#form h2 {
+  margin-top: 0;
+}
+
+#form input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+#form .input-group {
+  margin-top: 0.8rem;
+}
+
+#form .input-group.action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form .input-group.action .button, #form .input-group.action button {
+  width: 48%;
+}
+
+#form small {
+  opacity: 0.4;
 }
 
 footer {
